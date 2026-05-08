@@ -443,7 +443,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
             <form method="POST">
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" name="email" placeholder="aapka@email.com" required>
+                    <input type="email" name="email" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
@@ -471,7 +471,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" name="email" placeholder="aapka@email.com" required>
+                    <input type="email" name="email" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
