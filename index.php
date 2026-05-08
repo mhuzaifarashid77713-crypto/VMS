@@ -28,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
+        $pwd_match = password_verify($password, $user['password']) || md5($password) === $user['password'];
+if ($pwd_match) {
             $_SESSION['user_id']   = $user['id'];
             $_SESSION['full_name'] = $user['full_name'];
             $_SESSION['email']     = $user['email'];
