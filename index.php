@@ -454,7 +454,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
 
             <div class="demo-creds">
                 <strong>🔑 Admin Demo Account:</strong>
-                Email: admin@vms.com &nbsp;|&nbsp; Password: 123456
+                Email: admin@vms.com &nbsp;|&nbsp; Password: admin123
             </div>
         </div> 
     
@@ -479,7 +479,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 </div>
                 <div class="form-group">
                     <label>Confirm Password</label>
-                    <input type="password" name="confirm_password" placeholder="Dobara likhein" required>
+                    <input type="password" name="confirm_password" placeholder="Rewrite" required>
                 </div>
                 <button type="submit" name="signup" class="btn-submit">Create an Account →</button>
             </form>
