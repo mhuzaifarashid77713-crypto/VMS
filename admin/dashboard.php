@@ -283,8 +283,8 @@ $recent_users = $conn->query("SELECT * FROM users WHERE role='user' ORDER BY cre
                 <div class="role">🛡️ Administrator</div>
             </div>
         </div>
-        <a href="/VMS/user/index.php" class="btn-switch">🔄 View User</a>
-        <a href="/VMS/logout.php" class="btn-logout">🚪 Logout</a>
+        <a href="/user/index.php" class="btn-switch">🔄 View User</a>
+        <a href="/logout.php" class="btn-logout">🚪 Logout</a>
     </div>
 </aside>
 
