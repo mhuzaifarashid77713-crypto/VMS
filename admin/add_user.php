@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-grid" style="margin-bottom:20px">
                 <div class="form-group">
                     <label>Poora Name</label>
-                    <input type="text" name="full_name" placeholder="User ka poora naam" value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>" required>
+                    <input type="text" name="full_name" placeholder="User's full name" value="<?= htmlspecialchars($_POST['full_name'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
