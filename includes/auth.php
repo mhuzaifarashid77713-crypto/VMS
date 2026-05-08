@@ -29,17 +29,12 @@ function requireAdmin() {
 }
 
 function getBaseUrl() {
-    $dir = dirname(dirname($_SERVER['SCRIPT_NAME']));
-    // Handle if VMS is root or in subdir
-    if (strpos($_SERVER['SCRIPT_NAME'], '/VMS/') !== false) {
-        return '/VMS';
-    }
     return '';
 }
 
 function logout() {
     session_destroy();
-    header("Location: /VMS/index.php");
+    header("Location: /index.php");
     exit();
 }
 ?>
