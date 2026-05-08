@@ -457,7 +457,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 Email: admin@vms.com &nbsp;|&nbsp; Password: 123456
             </div>
         </div> 
-         </div>
+    
 
         <!-- Signup Form -->
         <div class="form-panel <?= $mode === 'signup' ? 'active' : '' ?>" id="panel-signup">
