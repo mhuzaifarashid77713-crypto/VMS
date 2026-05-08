@@ -5,9 +5,9 @@ require_once 'includes/auth.php';
 // Redirect if already logged in
 if (isLoggedIn()) {
     if (isAdmin()) {
-        header("Location: /VMS/admin/dashboard.php");
+       header("Location: /admin/dashboard.php");
     } else {
-        header("Location: /VMS/user/index.php");
+        header("Location: /user/index.php");
     }
     exit();
 }
@@ -36,9 +36,9 @@ if ($pwd_match) {
             $_SESSION['role']      = $user['role'];
 
             if ($user['role'] === 'admin') {
-                header("Location: /VMS/admin/dashboard.php");
+                header("Location: /admin/dashboard.php");
             } else {
-                header("Location: /VMS/user/index.php");
+                header("Location: /user/index.php");
             }
             exit();
         } else {
