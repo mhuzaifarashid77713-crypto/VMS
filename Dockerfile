@@ -1,10 +1,14 @@
-FROM php:8.2-cli
+FROM php:8.2-apache
 
-RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring
+RUN apt-get update && apt-get install -y \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    default-mysql-client \
+    && docker-php-ext-install pdo pdo_mysql mysqli mbstring
 
-WORKDIR /app
-COPY . /app/
+COPY . /var/www/html/
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "/app"]
+CMD ["apache2-foreground"]
