@@ -453,11 +453,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                 <button type="submit" name="login" class="btn-submit">Login Karein →</button>
             </form>
 
-            <!-- <div class="demo-creds">
+            <div class="demo-creds">
                 <strong>🔑 Admin Demo Account:</strong>
                 Email: admin@vms.com &nbsp;|&nbsp; Password: 123456
             </div>
-        </div> -->
+        </div> 
+         </div>
 
         <!-- Signup Form -->
         <div class="form-panel <?= $mode === 'signup' ? 'active' : '' ?>" id="panel-signup">
