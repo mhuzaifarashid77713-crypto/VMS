@@ -3,7 +3,7 @@ FROM php:8.2-cli
 RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring
 
 WORKDIR /app
-COPY VMS/ /app/
+COPY . /app/
 
 EXPOSE 8080
 
