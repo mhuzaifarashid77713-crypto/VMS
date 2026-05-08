@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $manufacturer = trim($_POST['manufacturer']);
     $price        = floatval($_POST['price']);
     $quantity     = intval($_POST['quantity']);
-    $expiry_date  = $_POST['expiry_date'];
+  $expiry_date  = date('Y-m-d', strtotime($_POST['expiry_date']));
     $description  = trim($_POST['description']);
 
     if (empty($name) || empty($manufacturer) || empty($expiry_date)) {
