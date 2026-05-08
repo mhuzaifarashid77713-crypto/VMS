@@ -247,16 +247,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
             flex-shrink: 0;
         }
 
-        /* Right Panel - Form */
-        .right-panel {
-            width: 440px;
-            padding: 60px 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: var(--surface);
-        }
-
+       .right-panel {
+    width: 100%;
+    max-width: 440px;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--surface);
+}
         .tab-switcher {
             display: flex;
             background: var(--surface2);
