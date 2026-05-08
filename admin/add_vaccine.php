@@ -57,11 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-grid" style="margin-bottom:20px">
                 <div class="form-group">
                     <label>Vaccine Name *</label>
-                    <input type="text" name="name" placeholder="jaise: COVID-19 Shield" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" required>
+                    <input type="text" name="name" placeholder="vaccine name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
                     <label>Manufacturer *</label>
-                    <input type="text" name="manufacturer" placeholder="jaise: BioNTech" value="<?= htmlspecialchars($_POST['manufacturer'] ?? '') ?>" required>
+                    <input type="text" name="manufacturer" placeholder="manufacturer" value="<?= htmlspecialchars($_POST['manufacturer'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
                     <label>Price (Rs) *</label>
