@@ -467,7 +467,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
             <form method="POST">
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" name="full_name" placeholder="Aapka naam" required>
+                    <input type="text" name="full_name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
