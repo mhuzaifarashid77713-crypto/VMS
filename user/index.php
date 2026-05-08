@@ -303,9 +303,9 @@ $available = $conn->query("SELECT COUNT(*) as c FROM vaccines WHERE quantity > 0
     <div class="header-actions">
         <div class="user-pill">👤 <?= htmlspecialchars($_SESSION['full_name']) ?></div>
         <?php if (isAdmin()): ?>
-            <a href="/VMS/admin/dashboard.php" class="btn-sm btn-sm-admin">🛡️ Admin Panel</a>
+            <a href="/admin/dashboard.php" class="btn-sm btn-sm-admin">🛡️ Admin Panel</a>
         <?php endif; ?>
-        <a href="/VMS/logout.php" class="btn-sm btn-sm-danger">🚪 Logout</a>
+        <a href="/logout.php" class="btn-sm btn-sm-danger">🚪 Logout</a>
     </div>
 </header>
 
