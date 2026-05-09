@@ -449,7 +449,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
                     <label>Password</label>
                     <input type="password" name="password" placeholder="••••••••" required>
                 </div>
-                <button type="submit" name="login" class="btn-submit">Login Karein →</button>
+                <button type="submit" name="login" class="btn-submit">Login →</button>
             </form>
 
             <div class="demo-creds">
