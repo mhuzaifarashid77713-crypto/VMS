@@ -110,17 +110,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            color: var(--text);
-        }
+    body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--text);
+}
 
         /* Animated background */
         body::before {
@@ -383,10 +382,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
         .form-panel { display: none; }
         .form-panel.active { display: block; }
 
-        @media (max-width: 768px) {
-            .left-panel { display: none; }
-            .right-panel { width: 100%; }
-        }
+      @media (max-width: 768px) {
+    .left-panel { display: none; }
+    .right-panel { width: 100%; max-width: 100%; }
+    .container { margin: 0; border-radius: 0; min-height: 100vh; overflow-y: auto; }
+}
     </style>
 </head>
 <body>
