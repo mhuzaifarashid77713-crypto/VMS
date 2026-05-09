@@ -18,6 +18,8 @@
     <nav class="sidebar-nav">
         <div class="nav-section">Main</div>
         <a href="dashboard.php" class="nav-link <?= $current==='dashboard.php'?'active':'' ?>"><span class="icon">📊</span> Dashboard</a>
+        <div class="nav-section">Orders</div>
+        <a href="orders.php" class="nav-link <?= $current==='orders.php'?'active':'' ?>"><span class="icon">📦</span> All Orders</a>
         <div class="nav-section">Users</div>
         <a href="users.php" class="nav-link <?= $current==='users.php'?'active':'' ?>"><span class="icon">👥</span> All Users</a>
         <a href="add_user.php" class="nav-link <?= $current==='add_user.php'?'active':'' ?>"><span class="icon">➕</span> Add User</a>
