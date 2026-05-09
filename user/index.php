@@ -148,7 +148,7 @@ $available = $conn->query("SELECT COUNT(*) as c FROM vaccines WHERE quantity > 0
 </div>
 
 <div class="vaccines-section">
-    <div class="result-count"><?= $vaccines->num_rows ?> vaccine<?= $vaccines->num_rows!==1?'s':''?> mili</div>
+    <div class="result-count"><?= $vaccines->num_rows ?> vaccine<?= $vaccines->num_rows!==1?'s':''?> Found</div>
     <?php if ($vaccines->num_rows === 0): ?>
         <div class="empty-state"><span class="icon">🔍</span><p>No vaccine found.</p></div>
     <?php else: ?>
