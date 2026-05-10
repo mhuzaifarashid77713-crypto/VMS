@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_vaccine_id'])) 
     $quantity   = intval($_POST['order_quantity']);
     $payment    = $_POST['payment_method'];
     $notes      = trim($_POST['notes'] ?? '');
+    $phone      = trim($_POST['phone'] ?? '');
+    $address    = trim($_POST['address'] ?? '');
     $user_id    = $_SESSION['user_id'];
 
     // Get vaccine
@@ -25,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_vaccine_id'])) 
         $order_err = "Invalid quantity. Only {$vaccine['quantity']} units available.";
     } else {
         $total = $vaccine['price'] * $quantity;
-        $ins = $conn->prepare("INSERT INTO orders (user_id, vaccine_id, quantity, total_price, payment, notes) VALUES (?, ?, ?, ?, ?, ?)");
-        $ins->bind_param("iiidss", $user_id, $vaccine_id, $quantity, $total, $payment, $notes);
+       $ins = $conn->prepare("INSERT INTO orders (user_id, vaccine_id, quantity, total_price, payment, notes, phone, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $ins->bind_param("iiidssss", $user_id, $vaccine_id, $quantity, $total, $payment, $notes, $phone, $address);
         if ($ins->execute()) {
             $order_msg = "✅ Order placed successfully! We'll confirm it shortly.";
         } else {
@@ -334,6 +336,14 @@ $my_orders = $my_orders->get_result();
                     <option value="cash_on_delivery">💵 Cash on Delivery</option>
                     <option value="bank_transfer">🏦 Bank Transfer</option>
                 </select>
+            </div>
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="phone" placeholder="e.g. 0300-1234567" required>
+            </div>
+            <div class="form-group">
+                <label>Delivery Address *</label>
+                <textarea name="address" rows="2" placeholder="House no, Street, City..." required></textarea>
             </div>
             <div class="form-group">
                 <label>Additional Notes (Optional)</label>
