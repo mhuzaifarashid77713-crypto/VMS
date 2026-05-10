@@ -148,7 +148,7 @@ $my_orders = $my_orders->get_result();
         /* Modal */
         .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:500; align-items:center; justify-content:center; padding:20px; }
         .modal-overlay.show { display:flex; }
-        .modal { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:32px; width:100%; max-width:480px; position:relative; }
+       .modal { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:32px; width:100%; max-width:480px; position:relative; max-height:90vh; overflow-y:auto; }
         .modal-close { position:absolute; top:16px; right:16px; background:none; border:none; color:var(--text-muted); font-size:22px; cursor:pointer; }
         .modal h2 { font-family:'Syne',sans-serif; font-size:20px; font-weight:700; color:#fff; margin-bottom:6px; }
         .modal .vaccine-info { background:var(--surface2); border-radius:12px; padding:14px; margin:16px 0; font-size:14px; }
